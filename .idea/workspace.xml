@@ -16,7 +16,7 @@
     <file path="$PROJECT_DIR$/../immomo/service/moa-service/user-service/trunk/user-service-impl/src/main/java/com/immomo/moaservice/impl/location/notify/processor/impl/FriendsNotifiedSelector.java" changelist="17864a4b-b5ed-438a-a513-617771252be8" time="1384928881718" ignored="false" />
     <file path="$PROJECT_DIR$/../immomo/service/moa-service/user-service/trunk/user-service-impl/src/main/java/com/immomo/moaservice/impl/location/notify/processor/impl/NotifyPushProcessor.java" changelist="17864a4b-b5ed-438a-a513-617771252be8" time="1384928881718" ignored="false" />
     <file path="$PROJECT_DIR$/../immomo/service/moa-service/user-service/trunk/user-service-impl/src/main/java/com/immomo/moaservice/impl/location/notify/processor/impl/UserBlockCollector.java" changelist="17864a4b-b5ed-438a-a513-617771252be8" time="1384917956601" ignored="false" />
-    <file path="/ProxyGenAction.java" changelist="17864a4b-b5ed-438a-a513-617771252be8" time="1384946109458" ignored="false" />
+    <file path="/ProxyGenAction.java" changelist="17864a4b-b5ed-438a-a513-617771252be8" time="1384946584287" ignored="false" />
     <file path="/a.dummy" changelist="17864a4b-b5ed-438a-a513-617771252be8" time="1384943573264" ignored="false" />
     <file path="$PROJECT_DIR$/../immomo/service/moa-service/user-service/trunk/user-service-impl/src/main/java/com/immomo/moaservice/impl/location/notify/filter/NotifyBoundFilter.java" changelist="17864a4b-b5ed-438a-a513-617771252be8" time="1384928880851" ignored="false" />
     <file path="$PROJECT_DIR$/../immomo/service/moa-service/user-service/trunk/user-service-impl/src/main/java/com/immomo/moaservice/impl/location/notify/processor/impl/NotifyFriendsInAbroad.java" changelist="17864a4b-b5ed-438a-a513-617771252be8" time="1384928881718" ignored="false" />
@@ -102,7 +102,7 @@
       <file leaf-file-name="ProxyGenAction.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/immomo/plugin/action/ProxyGenAction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="85" column="72" selection-start="3067" selection-end="3067" vertical-scroll-proportion="0.73706007">
+            <state line="80" column="16" selection-start="2948" selection-end="2948" vertical-scroll-proportion="0.58178055">
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1545#2186#0" expanded="true" />
@@ -593,7 +593,7 @@
     <option name="INCLUDE_TEXT_INTO_PATCH" value="false" />
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
     <option name="SHOW_FILE_HISTORY_DETAILS" value="true" />
-    <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
+    <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="false" />
     <option name="SHOW_DIRTY_RECURSIVELY" value="false" />
     <option name="LIMIT_HISTORY" value="true" />
     <option name="MAXIMUM_HISTORY_ROWS" value="1000" />
@@ -731,7 +731,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/immomo/plugin/action/ProxyGenAction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="85" column="72" selection-start="3067" selection-end="3067" vertical-scroll-proportion="0.73706007">
+        <state line="80" column="16" selection-start="2948" selection-end="2948" vertical-scroll-proportion="0.58178055">
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1545#2186#0" expanded="true" />

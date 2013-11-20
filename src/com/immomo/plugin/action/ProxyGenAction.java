@@ -79,6 +79,7 @@ public class ProxyGenAction extends AnAction {
                 }
 
 
+
             } else if (element instanceof PsiClass) {
                 /**
                  *开始解析类

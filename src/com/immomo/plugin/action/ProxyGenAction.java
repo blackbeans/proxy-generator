@@ -1,13 +1,18 @@
 package com.immomo.plugin.action;
 
+import com.immomo.plugin.builder.ProxyLogBuilder;
 import com.intellij.openapi.actionSystem.AnAction;
 import com.intellij.openapi.actionSystem.AnActionEvent;
 import com.intellij.openapi.actionSystem.DataKeys;
+import com.intellij.openapi.application.Application;
 import com.intellij.openapi.application.ApplicationManager;
 import com.intellij.openapi.command.WriteCommandAction;
 import com.intellij.openapi.util.Computable;
 import com.intellij.openapi.vfs.VirtualFile;
 import com.intellij.psi.*;
+import com.intellij.psi.impl.PsiClassImplUtil;
+import com.intellij.psi.impl.light.LightPackageReference;
+import com.intellij.psi.util.PsiTreeUtil;
 
 /**
  * Created with IntelliJ IDEA.
@@ -16,6 +21,9 @@ import com.intellij.psi.*;
  * Time: 上午10:48
  */
 public class ProxyGenAction extends AnAction {
+
+    private final ProxyLogBuilder logBuilder = new ProxyLogBuilder();
+
     public void actionPerformed(AnActionEvent e) {
 
         VirtualFile chooseFile = e.getProject().getBaseDir();
@@ -34,23 +42,23 @@ public class ProxyGenAction extends AnAction {
         System.out.println(virtualFile.getName());
 
 
-        final PsiFile interfacePsiFile = DataKeys.PSI_FILE.getData(e.getDataContext());
+        final PsiJavaFile interfacePsiFile = (PsiJavaFile) DataKeys.PSI_FILE.getData(e.getDataContext());
 
         final PsiDirectory directory = interfacePsiFile.getParent();
 
 
         final PsiElementFactory factory = JavaPsiFacade.getElementFactory(e.getProject());
         final PsiElement interfaceClass = DataKeys.PSI_ELEMENT.getData(e.getDataContext());
-        final String interfaceName = ((PsiClass) interfaceClass).getName().concat("Proxy");
-        final PsiFile proxyFile = ApplicationManager.getApplication().runWriteAction(new Computable<PsiFile>() {
+        final String proxyClassName = ((PsiClass) interfaceClass).getName().concat("Proxy");
+        final PsiJavaFile proxyFile = (PsiJavaFile) ApplicationManager.getApplication().runWriteAction(new Computable<PsiFile>() {
             @Override
             public PsiFile compute() {
                 PsiDirectory implDir = directory.findSubdirectory("impl");
-                String fileName = interfaceName.concat(".java");
+                String fileName = proxyClassName.concat(".java");
                 if (null != implDir) {
 
                     if (null != implDir.findFile(fileName)) {
-                        implDir.delete();
+                        implDir.findFile(fileName).delete();
                         System.out.println("删除旧的proxy文件");
                     }
                 } else {
@@ -63,22 +71,26 @@ public class ProxyGenAction extends AnAction {
 
         final PsiElement[] interfaceChild = interfacePsiFile.getChildren();
 
-        final PsiClass proxyClass = factory.createClass(interfaceName);
+        final PsiClass proxyClass = factory.createClass(proxyClassName);
 
         for (final PsiElement element : interfaceChild) {
             System.out.println("inteface------------" + element);
             if (element instanceof PsiPackageStatement ||
                     element instanceof PsiImportList) {
+                ApplicationManager.getApplication().runWriteAction(new Runnable() {
+                    @Override
+                    public void run() {
+                        if (element instanceof PsiImportList) {
+                            proxyFile.add(element);
+                            System.out.println("添加interface的类导入");
+                        } else {
+                            String packageStr = ((PsiPackageStatement) element).getPackageName().concat(".impl");
+                            proxyFile.setPackageName(packageStr);
+                            System.out.println("package 写入:" + packageStr);
+                        }
 
-                if (element instanceof PsiImportList) {
-                    proxyClass.add(element);
-                    System.out.println("添加interface的类导入");
-                    continue;
-                } else {
-                    proxyClass.add(factory.createPackageStatement(((PsiPackageStatement) element).getPackageName().concat(".impl")));
-                }
-
-
+                    }
+                });
 
             } else if (element instanceof PsiClass) {
                 /**
@@ -127,24 +139,40 @@ public class ProxyGenAction extends AnAction {
                     }
                 }
 
+                /**
+                 * 创建个构造器
+                 */
+                proxyClass.add(factory.createConstructor());
+
+                PsiField logField = factory.createFieldFromText("private static final org.apache.log4j.Logger LOG =" +
+                        " org.apache.log4j.Logger.getLogger(" + proxyClassName + ".class);", proxyClass);
+                proxyClass.add(logField);
+                /**
+                 * 对方方法进行proxy包装
+                 */
 
                 PsiMethod[] methods = clazz.getMethods();
                 for (PsiMethod method : methods) {
-                    PsiParameterList list = method.getParameterList();
-                    for (PsiParameter parameter : list.getParameters()) {
-                        StringBuilder sb = new StringBuilder(method.getName());
-                        sb.append("params:").append(parameter.getType()).append(":").append(parameter.getName());
-                        System.out.println(sb.toString());
-                    }
+
+                    /**
+                     * 生成我们需要的代码
+                     */
+                    PsiElement impMethod = method.copy();
+                    String proxyCode = logBuilder.genProxyCodeBlock(method);
+                    System.out.println("代码：" + proxyCode);
+                    PsiCodeBlock codeBlock = factory.createCodeBlockFromText(proxyCode, impMethod);
+                    impMethod.add(codeBlock);
+
+                    //将该方法加入
+                    proxyClass.add(impMethod);
+
                 }
             }
 
         }
 
         final PsiClass clazz = proxyClass;
-        new WriteCommandAction.Simple(e.getProject(), proxyFile)
-
-        {
+        new WriteCommandAction.Simple(e.getProject(), proxyFile) {
             @Override
             public void run() throws Throwable {
                 proxyFile.add(clazz);

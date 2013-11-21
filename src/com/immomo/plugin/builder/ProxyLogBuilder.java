@@ -12,6 +12,9 @@ import com.intellij.psi.*;
 public class ProxyLogBuilder {
 
     public String genProxyCodeBlock(String clazzName, PsiMethod method) {
+
+        method.getThrowsList();
+
         StringBuilder proxyInvoke = new StringBuilder("{").append(method.getReturnType().getCanonicalText())
                 .append("\tresponse = null;Throwable t = null;\n try{\nresponse=this.").append(method.getName()).append("Proxy(");
 
@@ -46,14 +49,19 @@ public class ProxyLogBuilder {
          */
 
         proxyInvoke.append("}catch(Exception e){\n")
-                .append("t=e;\n")
-                .append("LogUtils.error(LOG,e,\"").append(clazzName).append("|").append(method.getName()).append("|")
+                .append("t=e;\n");
+
+        if (null != method.getThrowsList()) {
+            proxyInvoke.append("throw e;\n");
+        }
+
+        proxyInvoke.append("LogUtils.error(LOG,e,\"").append(clazzName).append("|").append(method.getName()).append("|")
                 .append(paramsLogSB.toString()).append("\",").append(paramsSb).append(");");
 
         /**
          * finally
          */
-        proxyInvoke.append("}finally{ if(null !=t){ ")
+        proxyInvoke.append("}finally{ if(null ==t){ ")
                 .append("LogUtils.info(LOG,\"").append(clazzName).append("|").append(method.getName()).append("|")
                 .append(paramsLogSB.toString()).append("\",").append(paramsSb).append(");}}\n");
         /**

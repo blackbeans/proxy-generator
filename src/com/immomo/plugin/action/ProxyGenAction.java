@@ -30,6 +30,7 @@ public class ProxyGenAction extends AnAction {
     public void actionPerformed(AnActionEvent e) {
 
 
+
         /**
          * 获取当前选择的文件
          */
@@ -59,7 +60,6 @@ public class ProxyGenAction extends AnAction {
                 if (null != implDir) {
                     if (null != implDir.findFile(fileName)) {
                         implDir.findFile(fileName).delete();
-                        System.out.println("删除旧的proxy文件");
                     }
                 } else {
                     implDir = directory.createSubdirectory("impl");
@@ -83,12 +83,9 @@ public class ProxyGenAction extends AnAction {
                             PsiElement importStatement = element.copy();
 //                            importStatement.add(factory.createImportStatement(proxyClass));
                             proxyFile.add(importStatement);
-
-                            System.out.println("添加interface的类导入");
                         } else {
                             String packageStr = ((PsiPackageStatement) element).getPackageName().concat(".impl");
                             proxyFile.setPackageName(packageStr);
-                            System.out.println("package 写入:" + packageStr);
                         }
 
                     }
@@ -123,7 +120,6 @@ public class ProxyGenAction extends AnAction {
                 PsiElement[] proxyChild = proxyClass.getChildren();
                 for (final PsiElement child : proxyChild) {
 
-                    System.out.println("proxy------------" + child);
                     /**
                      * 如果是关键词即class那么就添加abstract
                      */

@@ -2,16 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="17864a4b-b5ed-438a-a513-617771252be8" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/immomo/plugin/builder/ProxyLogBuilder.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/immomo/plugin/action/ProxyGenAction.java" afterPath="$PROJECT_DIR$/src/com/immomo/plugin/action/ProxyGenAction.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/immomo/plugin/builder/ProxyLogBuilder.java" afterPath="$PROJECT_DIR$/src/com/immomo/plugin/builder/ProxyLogBuilder.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/META-INF/plugin.xml" afterPath="$PROJECT_DIR$/META-INF/plugin.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="idea.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/CodeGenApplication.java" changelist="17864a4b-b5ed-438a-a513-617771252be8" time="1384859092950" ignored="false" />
     <file path="/CodeGen.java" changelist="17864a4b-b5ed-438a-a513-617771252be8" time="1384860097140" ignored="false" />
-    <file path="/plugin.xml" changelist="17864a4b-b5ed-438a-a513-617771252be8" time="1384918981409" ignored="false" />
+    <file path="/plugin.xml" changelist="17864a4b-b5ed-438a-a513-617771252be8" time="1385023630019" ignored="false" />
     <file path="/ProxyGenApplication.java" changelist="17864a4b-b5ed-438a-a513-617771252be8" time="1384915577419" ignored="false" />
     <file path="$PROJECT_DIR$/.idea/modules.xml" changelist="17864a4b-b5ed-438a-a513-617771252be8" time="1384916952039" ignored="false" />
     <file path="$PROJECT_DIR$/.idea/misc.xml" changelist="17864a4b-b5ed-438a-a513-617771252be8" time="1384916961878" ignored="false" />
@@ -20,8 +20,8 @@
     <file path="$PROJECT_DIR$/../immomo/service/moa-service/user-service/trunk/user-service-impl/src/main/java/com/immomo/moaservice/impl/location/notify/processor/impl/FriendsNotifiedSelector.java" changelist="17864a4b-b5ed-438a-a513-617771252be8" time="1384928881718" ignored="false" />
     <file path="$PROJECT_DIR$/../immomo/service/moa-service/user-service/trunk/user-service-impl/src/main/java/com/immomo/moaservice/impl/location/notify/processor/impl/NotifyPushProcessor.java" changelist="17864a4b-b5ed-438a-a513-617771252be8" time="1384928881718" ignored="false" />
     <file path="$PROJECT_DIR$/../immomo/service/moa-service/user-service/trunk/user-service-impl/src/main/java/com/immomo/moaservice/impl/location/notify/processor/impl/UserBlockCollector.java" changelist="17864a4b-b5ed-438a-a513-617771252be8" time="1384917956601" ignored="false" />
-    <file path="/ProxyGenAction.java" changelist="17864a4b-b5ed-438a-a513-617771252be8" time="1384970744718" ignored="false" />
-    <file path="/a.dummy" changelist="17864a4b-b5ed-438a-a513-617771252be8" time="1384969380859" ignored="false" />
+    <file path="/ProxyGenAction.java" changelist="17864a4b-b5ed-438a-a513-617771252be8" time="1385025668165" ignored="false" />
+    <file path="/a.dummy" changelist="17864a4b-b5ed-438a-a513-617771252be8" time="1385023873603" ignored="false" />
     <file path="$PROJECT_DIR$/../immomo/service/moa-service/user-service/trunk/user-service-impl/src/main/java/com/immomo/moaservice/impl/location/notify/filter/NotifyBoundFilter.java" changelist="17864a4b-b5ed-438a-a513-617771252be8" time="1384928880851" ignored="false" />
     <file path="$PROJECT_DIR$/../immomo/service/moa-service/user-service/trunk/user-service-impl/src/main/java/com/immomo/moaservice/impl/location/notify/processor/impl/NotifyFriendsInAbroad.java" changelist="17864a4b-b5ed-438a-a513-617771252be8" time="1384928881718" ignored="false" />
     <file path="$PROJECT_DIR$/../immomo/service/moa-service/user-service/trunk/user-service-impl/src/main/java/com/immomo/moaservice/impl/location/notify/processor/impl/ValidVersion.java" changelist="17864a4b-b5ed-438a-a513-617771252be8" time="1384928881718" ignored="false" />
@@ -33,8 +33,8 @@
     <file path="$PROJECT_DIR$/../immomo/service/moa-service/user-service/trunk/user-service-impl/src/main/java/com/immomo/moaservice/impl/location/notify/processor/AbstractLocProcessor.java" changelist="17864a4b-b5ed-438a-a513-617771252be8" time="1384928882883" ignored="false" />
     <file path="$PROJECT_DIR$/../immomo/service/moa-service/user-service/trunk/user-service-impl/src/main/resources/location-notify.xml" changelist="17864a4b-b5ed-438a-a513-617771252be8" time="1384928882883" ignored="false" />
     <file path="$PROJECT_DIR$/../immomo/service/moa-service/user-service/trunk/user-service-impl/src/main/java/com/immomo/moaservice/impl/location/notify/bean/MoveRange.java" changelist="17864a4b-b5ed-438a-a513-617771252be8" time="1384928882883" ignored="false" />
-    <file path="/ProxyLogBuilder.java" changelist="17864a4b-b5ed-438a-a513-617771252be8" time="1384971000589" ignored="false" />
-    <file path="/Dummy.txt" changelist="17864a4b-b5ed-438a-a513-617771252be8" time="1384970990410" ignored="false" />
+    <file path="/ProxyLogBuilder.java" changelist="17864a4b-b5ed-438a-a513-617771252be8" time="1385026572949" ignored="false" />
+    <file path="/Dummy.txt" changelist="17864a4b-b5ed-438a-a513-617771252be8" time="1385009020230" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +49,6 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
@@ -87,6 +86,7 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -96,17 +96,64 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ProxyGenAction.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="ProxyGenAction.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/immomo/plugin/action/ProxyGenAction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="179" column="27" selection-start="6577" selection-end="6577" vertical-scroll-proportion="0.0">
+            <state line="177" column="34" selection-start="6995" selection-end="6995" vertical-scroll-proportion="0.39821428">
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1904#2565#0" expanded="true" />
-                <element signature="e#2554#2555#0" expanded="true" />
-                <element signature="e#3026#3651#0" expanded="true" />
-                <element signature="e#3632#3633#0" expanded="true" />
+                <element signature="e#2153#2813#0" expanded="true" />
+                <element signature="e#2802#2803#0" expanded="true" />
+                <element signature="e#3208#4009#0" expanded="true" />
+                <element signature="e#3990#3991#0" expanded="true" />
+                <element signature="e#4337#4609#0" expanded="true" />
+                <element signature="e#4590#4591#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PlatformDataKeys.class" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://$APPLICATION_HOME_DIR$/lib/openapi.jar!/com/intellij/openapi/actionSystem/PlatformDataKeys.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="20" column="104" selection-start="1777" selection-end="1777" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PsiKeyword.class" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://$APPLICATION_HOME_DIR$/lib/openapi.jar!/com/intellij/psi/PsiKeyword.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="30" column="21" selection-start="1113" selection-end="1113" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="plugin.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/META-INF/plugin.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="43" column="33" selection-start="1611" selection-end="1611" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProxyLogBuilder.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/immomo/plugin/builder/ProxyLogBuilder.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="69" column="59" selection-start="2344" selection-end="2344" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JavaPsiClassReferenceElement.class" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://$APPLICATION_HOME_DIR$/lib/idea.jar!/com/intellij/codeInsight/completion/JavaPsiClassReferenceElement.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="6" column="13" selection-start="178" selection-end="178" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -114,7 +161,7 @@
       <file leaf-file-name="PsiElementFactory.class" pinned="false" current="false" current-in-tab="false">
         <entry file="jar://$APPLICATION_HOME_DIR$/lib/openapi.jar!/com/intellij/psi/PsiElementFactory.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="113" column="40" selection-start="8270" selection-end="8270" vertical-scroll-proportion="0.0">
+            <state line="113" column="40" selection-start="8104" selection-end="8104" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -123,70 +170,16 @@
       <file leaf-file-name="PsiJavaCodeReferenceElement.class" pinned="false" current="false" current-in-tab="false">
         <entry file="jar://$APPLICATION_HOME_DIR$/lib/openapi.jar!/com/intellij/psi/PsiJavaCodeReferenceElement.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="17" selection-start="163" selection-end="163" vertical-scroll-proportion="0.0">
+            <state line="6" column="44" selection-start="163" selection-end="190" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LightPackageReference.class" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://$APPLICATION_HOME_DIR$/lib/idea.jar!/com/intellij/psi/impl/light/LightPackageReference.class">
+      <file leaf-file-name="ProxyGenApplication.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/immomo/plugin/application/ProxyGenApplication.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="26" selection-start="156" selection-end="156" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ProxyLogBuilder.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/immomo/plugin/builder/ProxyLogBuilder.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="24" selection-start="1102" selection-end="1102" vertical-scroll-proportion="0.5371901">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="JavaTokenType.class" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://$APPLICATION_HOME_DIR$/lib/openapi.jar!/com/intellij/psi/JavaTokenType.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="75" column="34" selection-start="3935" selection-end="3935" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IElementType.class" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://$APPLICATION_HOME_DIR$/lib/openapi.jar!/com/intellij/psi/tree/IElementType.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="13" selection-start="164" selection-end="164" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PsiJavaToken.class" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://$APPLICATION_HOME_DIR$/lib/openapi.jar!/com/intellij/psi/PsiJavaToken.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="29" selection-start="163" selection-end="175" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LightKeyword.class" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://$APPLICATION_HOME_DIR$/lib/idea.jar!/com/intellij/psi/impl/light/LightKeyword.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="25" selection-start="170" selection-end="182" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PsiJavaTokenImpl.class" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://$APPLICATION_HOME_DIR$/lib/idea.jar!/com/intellij/psi/impl/source/tree/java/PsiJavaTokenImpl.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="13" selection-start="181" selection-end="181" vertical-scroll-proportion="0.0">
+            <state line="12" column="13" selection-start="309" selection-end="309" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -212,8 +205,8 @@
       <list>
         <option value="$PROJECT_DIR$/src/CodeGenApplication.java" />
         <option value="$PROJECT_DIR$/src/CodeGen.java" />
-        <option value="$PROJECT_DIR$/META-INF/plugin.xml" />
         <option value="$PROJECT_DIR$/src/com/immomo/plugin/application/ProxyGenApplication.java" />
+        <option value="$PROJECT_DIR$/META-INF/plugin.xml" />
         <option value="$PROJECT_DIR$/src/com/immomo/plugin/action/ProxyGenAction.java" />
         <option value="$PROJECT_DIR$/src/com/immomo/plugin/builder/ProxyLogBuilder.java" />
       </list>
@@ -236,8 +229,8 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="y" value="22" />
-    <option name="width" value="1280" />
-    <option name="height" value="700" />
+    <option name="width" value="1920" />
+    <option name="height" value="955" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -265,7 +258,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -339,10 +331,6 @@
               <option name="myItemId" value="plugin" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -390,6 +378,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -397,22 +386,23 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="OverrideImplement.combined" value="true" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="options.lastSelected" value="preferences.pluginManager" />
     <property name="recentsLimit" value="5" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="restartRequiresConfirmation" value="true" />
-    <property name="FullScreen" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
+    <property name="FullScreen" value="false" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="dynamic.classpath" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
+    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="PsiViewer.ProjectComponent">
     <option name="HIGHLIGHT" value="false" />
@@ -421,6 +411,17 @@
     <option name="SPLIT_DIVIDER_POSITION" value="300" />
     <option name="AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="AUTOSCROLL_FROM_SOURCE" value="false" />
+  </component>
+  <component name="PublishConfig">
+    <servers>
+      <server id="d8393d8f-330b-4e10-9482-1ef10b962690">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" />
+          </mappings>
+        </serverdata>
+      </server>
+    </servers>
   </component>
   <component name="RunManager" selected="Plugin.proxy-gen">
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
@@ -435,19 +436,6 @@
       <option name="SHMEM_ADDRESS" value="javadebug" />
       <option name="HOST" value="localhost" />
       <option name="PORT" value="5005" />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
@@ -476,6 +464,19 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -565,7 +566,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1280" height="700" extended-state="6" />
+    <frame x="0" y="22" width="1920" height="955" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -574,24 +575,24 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39310345" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26826346" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="ASM" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3301887" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32934132" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24959481" sideWeight="0.6068966" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32993197" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="PsiViewer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24919957" sideWeight="0.73173654" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293556" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Tail" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32993197" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="PsiViewer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32900944" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -663,55 +664,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/openapi.jar!/com/intellij/openapi/application/Application.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="9" selection-start="605" selection-end="605" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/openapi.jar!/com/intellij/openapi/command/WriteCommandAction.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="57" selection-start="1519" selection-end="1519" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/META-INF/plugin.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="54" selection-start="474" selection-end="474" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/openapi.jar!/com/intellij/psi/PsiMethod.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="17" selection-start="163" selection-end="163" vertical-scroll-proportion="0.26041666">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/idea.jar!/com/intellij/psi/impl/light/JavaIdentifier.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="13" selection-start="170" selection-end="170" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/idea.jar!/com/intellij/psi/impl/source/tree/java/PsiJavaTokenImpl.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="13" selection-start="181" selection-end="181" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/idea.jar!/com/intellij/psi/impl/light/LightKeyword.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="25" selection-start="170" selection-end="182" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/lib/openapi.jar!/com/intellij/psi/PsiJavaToken.class">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="29" selection-start="163" selection-end="175" vertical-scroll-proportion="0.0">
@@ -733,51 +685,102 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/openapi.jar!/com/intellij/psi/PsiElementFactory.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="113" column="40" selection-start="8104" selection-end="8104" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/openapi.jar!/com/intellij/psi/util/PsiClassUtil.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="13" selection-start="164" selection-end="164" vertical-scroll-proportion="0.13736264">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/idea.jar!/com/intellij/psi/impl/light/LightClassReference.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="13" selection-start="170" selection-end="170" vertical-scroll-proportion="0.14071295">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/idea.jar!/com/intellij/codeInsight/completion/JavaPsiClassReferenceElement.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="13" selection-start="178" selection-end="178" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/META-INF/plugin.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="33" selection-start="1611" selection-end="1611" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/lib/openapi.jar!/com/intellij/psi/PsiJavaParserFacade.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="49" selection-start="3547" selection-end="3556" vertical-scroll-proportion="0.33333334">
+        <state line="17" column="30" selection-start="989" selection-end="989" vertical-scroll-proportion="0.31128404">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/openapi.jar!/com/intellij/psi/PsiKeyword.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="21" selection-start="1113" selection-end="1113" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/lib/idea.jar!/com/intellij/psi/impl/light/LightPackageReference.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="26" selection-start="156" selection-end="156" vertical-scroll-proportion="0.0">
+        <state line="5" column="26" selection-start="156" selection-end="156" vertical-scroll-proportion="0.025728988">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/lib/openapi.jar!/com/intellij/psi/PsiJavaCodeReferenceElement.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="17" selection-start="163" selection-end="163" vertical-scroll-proportion="0.0">
+        <state line="6" column="44" selection-start="163" selection-end="190" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/openapi.jar!/com/intellij/psi/PsiElementFactory.class">
+    <entry file="file://$PROJECT_DIR$/src/com/immomo/plugin/application/ProxyGenApplication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="113" column="40" selection-start="8270" selection-end="8270" vertical-scroll-proportion="0.0">
+        <state line="12" column="13" selection-start="309" selection-end="309" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/openapi.jar!/com/intellij/openapi/actionSystem/PlatformDataKeys.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="104" selection-start="1777" selection-end="1777" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/immomo/plugin/builder/ProxyLogBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="69" column="59" selection-start="2344" selection-end="2344" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/immomo/plugin/action/ProxyGenAction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="179" column="27" selection-start="6577" selection-end="6577" vertical-scroll-proportion="0.0">
+        <state line="177" column="34" selection-start="6995" selection-end="6995" vertical-scroll-proportion="0.39821428">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1904#2565#0" expanded="true" />
-            <element signature="e#2554#2555#0" expanded="true" />
-            <element signature="e#3026#3651#0" expanded="true" />
-            <element signature="e#3632#3633#0" expanded="true" />
+            <element signature="e#2153#2813#0" expanded="true" />
+            <element signature="e#2802#2803#0" expanded="true" />
+            <element signature="e#3208#4009#0" expanded="true" />
+            <element signature="e#3990#3991#0" expanded="true" />
+            <element signature="e#4337#4609#0" expanded="true" />
+            <element signature="e#4590#4591#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/immomo/plugin/builder/ProxyLogBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="24" selection-start="1102" selection-end="1102" vertical-scroll-proportion="0.5371901">
-          <folding />
         </state>
       </provider>
     </entry>

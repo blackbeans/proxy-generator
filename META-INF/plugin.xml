@@ -36,13 +36,21 @@
     </project-components>
 
     <actions>
-        <!-- Add your actions here -->
-        <action id="proxy-tool" class="com.immomo.plugin.action.ProxyGenAction" text="MOA日志代理生成器"
-                description="MOA日志代理生成器">
-            <add-to-group group-id="ProjectViewCompileGroup" anchor="first"/>
-            <add-to-group group-id="RefactoringMenu" anchor="first"/>
-            <add-to-group group-id="WindowMenu" anchor="first"/>
+
+        <action id="moa-tools.composite-tool" class="com.immomo.plugin.action.ProxyGenAction" text="组合方式"
+                description="组合方式">
         </action>
+        <action id="moa-tools.proxy-tool" class="com.immomo.plugin.action.ProxyGenAction" text="继承方式"
+                description="继承方式">
+        </action>
+
+        <group id="composite-tool" text="MOA日志代理类生成器" popup="true" description="MOA工具">
+            <reference id="moa-tools.composite-tool"/>
+            <reference id="moa-tools.proxy-tool"/>
+            <add-to-group anchor="last" group-id="ProjectViewPopupMenu"/>
+        </group>
+
+
     </actions>
 
     <extensions defaultExtensionNs="com.intellij">

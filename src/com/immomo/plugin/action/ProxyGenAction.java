@@ -4,15 +4,18 @@ import com.immomo.plugin.builder.ProxyLogBuilder;
 import com.intellij.openapi.actionSystem.AnAction;
 import com.intellij.openapi.actionSystem.AnActionEvent;
 import com.intellij.openapi.actionSystem.DataKeys;
-import com.intellij.openapi.application.Application;
 import com.intellij.openapi.application.ApplicationManager;
 import com.intellij.openapi.command.WriteCommandAction;
+import com.intellij.openapi.ui.MessageType;
+import com.intellij.openapi.ui.popup.Balloon;
+import com.intellij.openapi.ui.popup.JBPopupFactory;
 import com.intellij.openapi.util.Computable;
-import com.intellij.openapi.vfs.VirtualFile;
+import com.intellij.openapi.wm.StatusBar;
+import com.intellij.openapi.wm.WindowManager;
 import com.intellij.psi.*;
-import com.intellij.psi.impl.PsiClassImplUtil;
-import com.intellij.psi.impl.light.LightPackageReference;
-import com.intellij.psi.util.PsiTreeUtil;
+import com.intellij.psi.javadoc.PsiDocComment;
+import com.intellij.ui.awt.RelativePoint;
+import org.apache.commons.lang.StringUtils;
 
 /**
  * Created with IntelliJ IDEA.
@@ -26,23 +29,21 @@ public class ProxyGenAction extends AnAction {
 
     public void actionPerformed(AnActionEvent e) {
 
-        VirtualFile chooseFile = e.getProject().getBaseDir();
-        System.out.println(chooseFile.getPath());
 
-
-        VirtualFile file = e.getData(DataKeys.VIRTUAL_FILE);
-        System.out.println(file.getName());
-
-
-        VirtualFile virtualFile = e.getProject().getBaseDir();
-
-        System.out.println(e.getData(DataKeys.PROJECT_FILE_DIRECTORY));
-
-
-        System.out.println(virtualFile.getName());
-
-
+        /**
+         * 获取当前选择的文件
+         */
         final PsiJavaFile interfacePsiFile = (PsiJavaFile) DataKeys.PSI_FILE.getData(e.getDataContext());
+
+        if (null == interfacePsiFile) {
+            StatusBar statusBar = WindowManager.getInstance().getStatusBar(DataKeys.PROJECT.getData(e.getDataContext()));
+            JBPopupFactory.getInstance().
+                    createHtmlTextBalloonBuilder("请选择对应的.Java文件", MessageType.WARNING, null).setFadeoutTime(10 * 1000)
+                    .createBalloon()
+                    .show(RelativePoint.getCenterOf(statusBar.getComponent()), Balloon.Position.above);
+            return;
+        }
+
 
         final PsiDirectory directory = interfacePsiFile.getParent();
 
@@ -56,7 +57,6 @@ public class ProxyGenAction extends AnAction {
                 PsiDirectory implDir = directory.findSubdirectory("impl");
                 String fileName = proxyClassName.concat(".java");
                 if (null != implDir) {
-
                     if (null != implDir.findFile(fileName)) {
                         implDir.findFile(fileName).delete();
                         System.out.println("删除旧的proxy文件");
@@ -74,14 +74,16 @@ public class ProxyGenAction extends AnAction {
         final PsiClass proxyClass = factory.createClass(proxyClassName);
 
         for (final PsiElement element : interfaceChild) {
-            System.out.println("inteface------------" + element);
             if (element instanceof PsiPackageStatement ||
                     element instanceof PsiImportList) {
                 ApplicationManager.getApplication().runWriteAction(new Runnable() {
                     @Override
                     public void run() {
                         if (element instanceof PsiImportList) {
-                            proxyFile.add(element);
+                            PsiElement importStatement = element.copy();
+//                            importStatement.add(factory.createImportStatement(proxyClass));
+                            proxyFile.add(importStatement);
+
                             System.out.println("添加interface的类导入");
                         } else {
                             String packageStr = ((PsiPackageStatement) element).getPackageName().concat(".impl");
@@ -101,6 +103,13 @@ public class ProxyGenAction extends AnAction {
                  * 1.生成proxy类名并创建这个类
                  */
                 final PsiClass clazz = ((PsiClass) element);
+                ApplicationManager.getApplication().runWriteAction(new Runnable() {
+                    @Override
+                    public void run() {
+                        PsiDocComment classDesc = (PsiDocComment) clazz.getDocComment().copy();
+                        proxyFile.add(classDesc);
+                    }
+                });
 
                 /**
                  * 2.引入import和Package
@@ -144,8 +153,8 @@ public class ProxyGenAction extends AnAction {
                  */
                 proxyClass.add(factory.createConstructor());
 
-                PsiField logField = factory.createFieldFromText("private static final org.apache.log4j.Logger LOG =" +
-                        " org.apache.log4j.Logger.getLogger(" + proxyClassName + ".class);", proxyClass);
+                PsiField logField = factory.createFieldFromText(
+                        logBuilder.genLogField(StringUtils.uncapitalize(proxyClassName)), proxyClass);
                 proxyClass.add(logField);
                 /**
                  * 对方方法进行proxy包装
@@ -157,14 +166,19 @@ public class ProxyGenAction extends AnAction {
                     /**
                      * 生成我们需要的代码
                      */
-                    PsiElement impMethod = method.copy();
-                    String proxyCode = logBuilder.genProxyCodeBlock(method);
-                    System.out.println("代码：" + proxyCode);
+                    PsiMethod impMethod = (PsiMethod) method.copy();
+                    String proxyCode = logBuilder.genProxyCodeBlock(proxyClassName,method);
                     PsiCodeBlock codeBlock = factory.createCodeBlockFromText(proxyCode, impMethod);
                     impMethod.add(codeBlock);
 
                     //将该方法加入
                     proxyClass.add(impMethod);
+
+                    PsiMethod proxyMethod = (PsiMethod) method.copy();
+                    //生成代理方法 抽象的方法
+                    proxyMethod.setName(proxyMethod.getName().concat("Proxy"));
+                    proxyMethod.getModifierList().add(factory.createKeyword(PsiKeyword.ABSTRACT));
+                    proxyClass.add(proxyMethod);
 
                 }
             }

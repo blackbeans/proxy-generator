@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="17864a4b-b5ed-438a-a513-617771252be8" name="Default" comment="完毕">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/immomo/plugin/builder/ImportBuilder.java" afterPath="$PROJECT_DIR$/src/com/immomo/plugin/builder/ImportBuilder.java" />
+    <list default="true" id="17864a4b-b5ed-438a-a513-617771252be8" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/immomo/plugin/action/ProxyGenAction.java" afterPath="$PROJECT_DIR$/src/com/immomo/plugin/action/ProxyGenAction.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/immomo/plugin/builder/ProxyLogBuilder.java" afterPath="$PROJECT_DIR$/src/com/immomo/plugin/builder/ProxyLogBuilder.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -20,7 +19,7 @@
     <file path="$PROJECT_DIR$/../immomo/service/moa-service/user-service/trunk/user-service-impl/src/main/java/com/immomo/moaservice/impl/location/notify/processor/impl/FriendsNotifiedSelector.java" changelist="17864a4b-b5ed-438a-a513-617771252be8" time="1384928881718" ignored="false" />
     <file path="$PROJECT_DIR$/../immomo/service/moa-service/user-service/trunk/user-service-impl/src/main/java/com/immomo/moaservice/impl/location/notify/processor/impl/NotifyPushProcessor.java" changelist="17864a4b-b5ed-438a-a513-617771252be8" time="1384928881718" ignored="false" />
     <file path="$PROJECT_DIR$/../immomo/service/moa-service/user-service/trunk/user-service-impl/src/main/java/com/immomo/moaservice/impl/location/notify/processor/impl/UserBlockCollector.java" changelist="17864a4b-b5ed-438a-a513-617771252be8" time="1384917956601" ignored="false" />
-    <file path="/ProxyGenAction.java" changelist="17864a4b-b5ed-438a-a513-617771252be8" time="1385113606435" ignored="false" />
+    <file path="/ProxyGenAction.java" changelist="17864a4b-b5ed-438a-a513-617771252be8" time="1385115717085" ignored="false" />
     <file path="/a.dummy" changelist="17864a4b-b5ed-438a-a513-617771252be8" time="1385023873603" ignored="false" />
     <file path="$PROJECT_DIR$/../immomo/service/moa-service/user-service/trunk/user-service-impl/src/main/java/com/immomo/moaservice/impl/location/notify/filter/NotifyBoundFilter.java" changelist="17864a4b-b5ed-438a-a513-617771252be8" time="1384928880851" ignored="false" />
     <file path="$PROJECT_DIR$/../immomo/service/moa-service/user-service/trunk/user-service-impl/src/main/java/com/immomo/moaservice/impl/location/notify/processor/impl/NotifyFriendsInAbroad.java" changelist="17864a4b-b5ed-438a-a513-617771252be8" time="1384928881718" ignored="false" />
@@ -33,8 +32,8 @@
     <file path="$PROJECT_DIR$/../immomo/service/moa-service/user-service/trunk/user-service-impl/src/main/java/com/immomo/moaservice/impl/location/notify/processor/AbstractLocProcessor.java" changelist="17864a4b-b5ed-438a-a513-617771252be8" time="1384928882883" ignored="false" />
     <file path="$PROJECT_DIR$/../immomo/service/moa-service/user-service/trunk/user-service-impl/src/main/resources/location-notify.xml" changelist="17864a4b-b5ed-438a-a513-617771252be8" time="1384928882883" ignored="false" />
     <file path="$PROJECT_DIR$/../immomo/service/moa-service/user-service/trunk/user-service-impl/src/main/java/com/immomo/moaservice/impl/location/notify/bean/MoveRange.java" changelist="17864a4b-b5ed-438a-a513-617771252be8" time="1384928882883" ignored="false" />
-    <file path="/ProxyLogBuilder.java" changelist="17864a4b-b5ed-438a-a513-617771252be8" time="1385114352274" ignored="false" />
-    <file path="/Dummy.txt" changelist="17864a4b-b5ed-438a-a513-617771252be8" time="1385114521228" ignored="false" />
+    <file path="/ProxyLogBuilder.java" changelist="17864a4b-b5ed-438a-a513-617771252be8" time="1385117168810" ignored="false" />
+    <file path="/Dummy.txt" changelist="17864a4b-b5ed-438a-a513-617771252be8" time="1385114539608" ignored="false" />
     <file path="$PROJECT_DIR$/../../immomo/service/moa-service/feed-service/trunk/feed-service-impl/src/main/java/com/immomo/moaservice/impl/FeedBootstrap.java" changelist="17864a4b-b5ed-438a-a513-617771252be8" time="1385094399148" ignored="false" />
     <file path="/fragment.java" changelist="17864a4b-b5ed-438a-a513-617771252be8" time="1385107917028" ignored="false" />
     <file path="/ImportBuilder.java" changelist="17864a4b-b5ed-438a-a513-617771252be8" time="1385113717493" ignored="false" />
@@ -55,22 +54,7 @@
   </component>
   <component name="DebuggerManager">
     <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
-      <breakpoint url="file://$PROJECT_DIR$/src/com/immomo/plugin/builder/ProxyLogBuilder.java" line="26" class="com.immomo.plugin.builder.ProxyLogBuilder" package="com.immomo.plugin.builder">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/com/immomo/plugin/builder/ProxyLogBuilder.java" line="86" class="com.immomo.plugin.builder.ProxyLogBuilder" package="com.immomo.plugin.builder">
+      <breakpoint url="file://$PROJECT_DIR$/src/com/immomo/plugin/builder/ProxyLogBuilder.java" line="98" class="com.immomo.plugin.builder.ProxyLogBuilder" package="com.immomo.plugin.builder">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -135,7 +119,7 @@
       <file leaf-file-name="ProxyGenAction.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/immomo/plugin/action/ProxyGenAction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="165" column="46" selection-start="6557" selection-end="6557" vertical-scroll-proportion="0.0">
+            <state line="183" column="27" selection-start="7252" selection-end="7252" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -170,10 +154,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PhpCodeGenAction.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="PhpCodeGenAction.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/immomo/plugin/action/PhpCodeGenAction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="45" selection-start="486" selection-end="486" vertical-scroll-proportion="0.6418919">
+            <state line="19" column="27" selection-start="486" selection-end="486" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -181,10 +165,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ProxyLogBuilder.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="ProxyLogBuilder.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/immomo/plugin/builder/ProxyLogBuilder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="99" column="88" selection-start="3445" selection-end="3445" vertical-scroll-proportion="0.0">
+            <state line="12" column="80" selection-start="289" selection-end="289" vertical-scroll-proportion="0.4054054">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -243,8 +227,8 @@
         <option value="$PROJECT_DIR$/src/com/immomo/plugin/action/PhpCodeGenAction.java" />
         <option value="$PROJECT_DIR$/META-INF/plugin.xml" />
         <option value="$PROJECT_DIR$/src/com/immomo/plugin/annotation/LogProxy.java" />
-        <option value="$PROJECT_DIR$/src/com/immomo/plugin/action/ProxyGenAction.java" />
         <option value="$PROJECT_DIR$/src/com/immomo/plugin/builder/ImportBuilder.java" />
+        <option value="$PROJECT_DIR$/src/com/immomo/plugin/action/ProxyGenAction.java" />
         <option value="$PROJECT_DIR$/src/com/immomo/plugin/builder/ProxyLogBuilder.java" />
       </list>
     </option>
@@ -368,6 +352,10 @@
               <option name="myItemId" value="plugin" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -396,20 +384,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="action" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="proxy-generator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="proxy-generator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="META-INF" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -621,7 +595,11 @@
       <created>1385112901624</created>
       <updated>1385112901624</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="加入写死的抽样逻辑">
+      <created>1385114542118</created>
+      <updated>1385114542118</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -700,7 +678,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="代码生成已经完成完毕" />
+    <option name="LAST_COMMIT_MESSAGE" value="加入写死的抽样逻辑" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -717,6 +695,7 @@
     <MESSAGE value="类生成已经基本完成，接下来开始组合方式生成类文件" />
     <MESSAGE value="代码生成已经完成" />
     <MESSAGE value="代码生成已经完成完毕" />
+    <MESSAGE value="加入写死的抽样逻辑" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -801,9 +780,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/immomo/plugin/builder/ProxyLogBuilder.java">
+    <entry file="file://$PROJECT_DIR$/src/com/immomo/plugin/action/PhpCodeGenAction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="99" column="88" selection-start="3445" selection-end="3445" vertical-scroll-proportion="0.0">
+        <state line="19" column="27" selection-start="486" selection-end="486" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -821,14 +800,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/immomo/plugin/action/ProxyGenAction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="165" column="46" selection-start="6557" selection-end="6557" vertical-scroll-proportion="0.0">
+        <state line="183" column="27" selection-start="7252" selection-end="7252" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/immomo/plugin/action/PhpCodeGenAction.java">
+    <entry file="file://$PROJECT_DIR$/src/com/immomo/plugin/builder/ProxyLogBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="45" selection-start="486" selection-end="486" vertical-scroll-proportion="0.6418919">
+        <state line="12" column="80" selection-start="289" selection-end="289" vertical-scroll-proportion="0.4054054">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

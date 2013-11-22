@@ -37,7 +37,7 @@ public class ProxyLogBuilder {
             proxyInvoke.append("Throwable t = null;try{\nresponse=this.").append(method.getName()).append("Proxy(");
         } else {
             proxyInvoke.append(method.getReturnType().getCanonicalText())
-                    .append("\tresponse = false;Throwable t = null;\n try{\nresponse=this.").append(method.getName()).append("Proxy(");
+                    .append("\tresponse = null;Throwable t = null;\n try{\nresponse=this.").append(method.getName()).append("Proxy(");
         }
 
         StringBuilder paramsSb = new StringBuilder();
@@ -61,16 +61,28 @@ public class ProxyLogBuilder {
             proxyInvoke.append(paramsSb).append(");\n");
 
             /**
-             * 没有返回值
+             * 有返回值
              */
             if (!method.getReturnType().isAssignableFrom(PsiType.VOID)) {
                 //将返回值也加入
                 paramsSb.append(",response");
                 paramsLogSB.append("{").append(paramIdx++).append("}");
             }
-
-
+            paramsSb.insert(0,",");
+        } else {
+            proxyInvoke.append(");\n");
+            //没有参数有返回值
+            if (!method.getReturnType().isAssignableFrom(PsiType.VOID)) {
+                paramsLogSB.append("{").append(paramIdx++).append("}");
+                //将返回值也加入
+                paramsSb.append("response");
+                paramsSb.insert(0,",");
+            } else {
+                 //参数为空，返回也为空
+            }
         }
+
+
 
         /**
          * catch
@@ -81,9 +93,9 @@ public class ProxyLogBuilder {
 
 
         proxyInvoke.append("LogUtils.error(LOG,e,\"").append(clazzName).append("|").append(method.getName()).append("|")
-                .append(paramsLogSB.toString()).append("\",").append(paramsSb).append(");");
+                .append(paramsLogSB.toString()).append("\"").append(paramsSb).append(");");
 
-        if (!ArrayUtils.isEmpty( method.getThrowsList().getChildren())) {
+        if (!ArrayUtils.isEmpty(method.getThrowsList().getChildren())) {
             proxyInvoke.append("throw e;\n");
         }
         /**
@@ -91,7 +103,7 @@ public class ProxyLogBuilder {
          */
         proxyInvoke.append("}finally{ if(null ==t || RANDOM.nextInt(1000) == 0 ){ ")
                 .append("LogUtils.info(LOG,\"").append(clazzName).append("|").append(method.getName()).append("|")
-                .append(paramsLogSB.toString()).append("\",").append(paramsSb).append(");}}\n");
+                .append(paramsLogSB.toString()).append("\"").append(paramsSb).append(");}}\n");
 
         if (!method.getReturnType().isAssignableFrom(PsiType.VOID)) {
             /**

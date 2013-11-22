@@ -17,6 +17,7 @@ import com.intellij.psi.*;
 import com.intellij.psi.codeStyle.JavaCodeStyleManager;
 import com.intellij.psi.javadoc.PsiDocComment;
 import com.intellij.ui.awt.RelativePoint;
+import org.apache.commons.lang.ArrayUtils;
 import org.apache.commons.lang.StringUtils;
 import org.jetbrains.jps.model.java.LanguageLevel;
 
@@ -165,7 +166,7 @@ public class ProxyGenAction extends AnAction {
                 /**
                  * 加入随机抽样日志
                  */
-                proxyClass.add(factory.createFieldFromText("private static final Random RANDOM = new Random(); ",proxyClass));
+                proxyClass.add(factory.createFieldFromText("private static final Random RANDOM = new Random(); ", proxyClass));
 
                 PsiField logField = factory.createFieldFromText(
                         logBuilder.genLogField(StringUtils.uncapitalize(proxyClassName)), proxyClass);
@@ -181,6 +182,13 @@ public class ProxyGenAction extends AnAction {
                      * 生成我们需要的代码
                      */
                     PsiMethod impMethod = (PsiMethod) method.copy();
+                    /**
+                     * 没有public的增加public
+                     */
+                    if (ArrayUtils.isEmpty(method.getModifierList().getChildren())) {
+                        impMethod.getModifierList().add(factory.createKeyword(PsiKeyword.PUBLIC));
+                    }
+
                     String proxyCode = logBuilder.genProxyCodeBlock(proxyClassName, method);
                     PsiCodeBlock codeBlock = factory.createCodeBlockFromText(proxyCode, impMethod);
                     impMethod.add(codeBlock);
@@ -189,6 +197,13 @@ public class ProxyGenAction extends AnAction {
                     proxyClass.add(impMethod);
 
                     PsiMethod proxyMethod = (PsiMethod) method.copy();
+                    /**
+                     * 没有public的增加public
+                     */
+                    if (ArrayUtils.isEmpty(method.getModifierList().getChildren())) {
+                        proxyMethod.getModifierList().add(factory.createKeyword(PsiKeyword.PUBLIC));
+                    }
+
                     //生成代理方法 抽象的方法
                     proxyMethod.setName(proxyMethod.getName().concat("Proxy"));
                     proxyMethod.getModifierList().add(factory.createKeyword(PsiKeyword.ABSTRACT));

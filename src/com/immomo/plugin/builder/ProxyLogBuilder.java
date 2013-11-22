@@ -101,7 +101,7 @@ public class ProxyLogBuilder {
         /**
          * finally
          */
-        proxyInvoke.append("}finally{ if(null ==t || RANDOM.nextInt(1000) == 0 ){ ")
+        proxyInvoke.append("}finally{ if(null ==t && RANDOM.nextInt(1000) == 0 ){ ")
                 .append("LogUtils.info(LOG,\"").append(clazzName).append("|").append(method.getName()).append("|")
                 .append(paramsLogSB.toString()).append("\"").append(paramsSb).append(");}}\n");
 

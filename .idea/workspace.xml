@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="17864a4b-b5ed-438a-a513-617771252be8" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/immomo/plugin/action/ProxyGenAction.java" afterPath="$PROJECT_DIR$/src/com/immomo/plugin/action/ProxyGenAction.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/immomo/plugin/builder/ProxyLogBuilder.java" afterPath="$PROJECT_DIR$/src/com/immomo/plugin/builder/ProxyLogBuilder.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -33,7 +32,7 @@
     <file path="$PROJECT_DIR$/../immomo/service/moa-service/user-service/trunk/user-service-impl/src/main/resources/location-notify.xml" changelist="17864a4b-b5ed-438a-a513-617771252be8" time="1384928882883" ignored="false" />
     <file path="$PROJECT_DIR$/../immomo/service/moa-service/user-service/trunk/user-service-impl/src/main/java/com/immomo/moaservice/impl/location/notify/bean/MoveRange.java" changelist="17864a4b-b5ed-438a-a513-617771252be8" time="1384928882883" ignored="false" />
     <file path="/ProxyLogBuilder.java" changelist="17864a4b-b5ed-438a-a513-617771252be8" time="1385117168810" ignored="false" />
-    <file path="/Dummy.txt" changelist="17864a4b-b5ed-438a-a513-617771252be8" time="1385114539608" ignored="false" />
+    <file path="/Dummy.txt" changelist="17864a4b-b5ed-438a-a513-617771252be8" time="1385117276219" ignored="false" />
     <file path="$PROJECT_DIR$/../../immomo/service/moa-service/feed-service/trunk/feed-service-impl/src/main/java/com/immomo/moaservice/impl/FeedBootstrap.java" changelist="17864a4b-b5ed-438a-a513-617771252be8" time="1385094399148" ignored="false" />
     <file path="/fragment.java" changelist="17864a4b-b5ed-438a-a513-617771252be8" time="1385107917028" ignored="false" />
     <file path="/ImportBuilder.java" changelist="17864a4b-b5ed-438a-a513-617771252be8" time="1385113717493" ignored="false" />
@@ -168,7 +167,7 @@
       <file leaf-file-name="ProxyLogBuilder.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/immomo/plugin/builder/ProxyLogBuilder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="80" selection-start="289" selection-end="289" vertical-scroll-proportion="0.4054054">
+            <state line="104" column="33" selection-start="3524" selection-end="3524" vertical-scroll-proportion="0.5405405">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -599,7 +598,11 @@
       <created>1385114542118</created>
       <updated>1385114542118</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="bugfix:修改了没有参数也没有返回值的场景">
+      <created>1385117278719</created>
+      <updated>1385117278719</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -678,7 +681,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="加入写死的抽样逻辑" />
+    <option name="LAST_COMMIT_MESSAGE" value="bugfix:修改了没有参数也没有返回值的场景" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -696,6 +699,7 @@
     <MESSAGE value="代码生成已经完成" />
     <MESSAGE value="代码生成已经完成完毕" />
     <MESSAGE value="加入写死的抽样逻辑" />
+    <MESSAGE value="bugfix:修改了没有参数也没有返回值的场景" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -807,7 +811,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/immomo/plugin/builder/ProxyLogBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="80" selection-start="289" selection-end="289" vertical-scroll-proportion="0.4054054">
+        <state line="104" column="33" selection-start="3524" selection-end="3524" vertical-scroll-proportion="0.5405405">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

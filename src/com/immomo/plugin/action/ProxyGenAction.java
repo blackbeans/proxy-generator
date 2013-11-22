@@ -1,5 +1,6 @@
 package com.immomo.plugin.action;
 
+import com.immomo.plugin.builder.ImportBuilder;
 import com.immomo.plugin.builder.ProxyLogBuilder;
 import com.intellij.openapi.actionSystem.AnAction;
 import com.intellij.openapi.actionSystem.AnActionEvent;
@@ -13,9 +14,11 @@ import com.intellij.openapi.util.Computable;
 import com.intellij.openapi.wm.StatusBar;
 import com.intellij.openapi.wm.WindowManager;
 import com.intellij.psi.*;
+import com.intellij.psi.codeStyle.JavaCodeStyleManager;
 import com.intellij.psi.javadoc.PsiDocComment;
 import com.intellij.ui.awt.RelativePoint;
 import org.apache.commons.lang.StringUtils;
+import org.jetbrains.jps.model.java.LanguageLevel;
 
 /**
  * Created with IntelliJ IDEA.
@@ -27,10 +30,12 @@ public class ProxyGenAction extends AnAction {
 
     private final ProxyLogBuilder logBuilder = new ProxyLogBuilder();
 
+    private final ImportBuilder importBuilder = new ImportBuilder();
+
     public void actionPerformed(AnActionEvent e) {
 
 
-
+        final JavaCodeStyleManager codeStyleManager = JavaCodeStyleManager.getInstance(e.getProject());
         /**
          * 获取当前选择的文件
          */
@@ -51,7 +56,12 @@ public class ProxyGenAction extends AnAction {
 
         final PsiElementFactory factory = JavaPsiFacade.getElementFactory(e.getProject());
         final PsiElement interfaceClass = DataKeys.PSI_ELEMENT.getData(e.getDataContext());
+        /**
+         * 判断当前是否为接口文件
+         */
+
         final String proxyClassName = ((PsiClass) interfaceClass).getName().concat("Proxy");
+
         final PsiJavaFile proxyFile = (PsiJavaFile) ApplicationManager.getApplication().runWriteAction(new Computable<PsiFile>() {
             @Override
             public PsiFile compute() {
@@ -68,7 +78,6 @@ public class ProxyGenAction extends AnAction {
             }
         });
 
-
         final PsiElement[] interfaceChild = interfacePsiFile.getChildren();
 
         final PsiClass proxyClass = factory.createClass(proxyClassName);
@@ -76,12 +85,15 @@ public class ProxyGenAction extends AnAction {
         for (final PsiElement element : interfaceChild) {
             if (element instanceof PsiPackageStatement ||
                     element instanceof PsiImportList) {
-                ApplicationManager.getApplication().runWriteAction(new Runnable() {
+                new WriteCommandAction.Simple(e.getProject(), proxyFile) {
                     @Override
-                    public void run() {
+                    protected void run() throws Throwable {
                         if (element instanceof PsiImportList) {
-                            PsiElement importStatement = element.copy();
-//                            importStatement.add(factory.createImportStatement(proxyClass));
+                            PsiImportList importStatement = (PsiImportList) element.copy();
+                            /**
+                             * 引入额外的import
+                             */
+                            importBuilder.fillExtraImport(factory, importStatement);
                             proxyFile.add(importStatement);
                         } else {
                             String packageStr = ((PsiPackageStatement) element).getPackageName().concat(".impl");
@@ -89,7 +101,7 @@ public class ProxyGenAction extends AnAction {
                         }
 
                     }
-                });
+                }.execute();
 
             } else if (element instanceof PsiClass) {
                 /**
@@ -100,17 +112,14 @@ public class ProxyGenAction extends AnAction {
                  * 1.生成proxy类名并创建这个类
                  */
                 final PsiClass clazz = ((PsiClass) element);
-                ApplicationManager.getApplication().runWriteAction(new Runnable() {
+                new WriteCommandAction.Simple(e.getProject(), proxyFile) {
                     @Override
-                    public void run() {
+                    protected void run() throws Throwable {
                         PsiDocComment classDesc = (PsiDocComment) clazz.getDocComment().copy();
+                        classDesc = (PsiDocComment) codeStyleManager.shortenClassReferences(classDesc);
                         proxyFile.add(classDesc);
                     }
-                });
-
-                /**
-                 * 2.引入import和Package
-                 */
+                }.execute();
 
 
                 /**
@@ -148,6 +157,10 @@ public class ProxyGenAction extends AnAction {
                  * 创建个构造器
                  */
                 proxyClass.add(factory.createConstructor());
+                /**
+                 * 加入一个init方法
+                 */
+                proxyClass.add(factory.createMethodFromText("public abstract void init() throws Exception;", proxyClass));
 
                 PsiField logField = factory.createFieldFromText(
                         logBuilder.genLogField(StringUtils.uncapitalize(proxyClassName)), proxyClass);
@@ -163,7 +176,7 @@ public class ProxyGenAction extends AnAction {
                      * 生成我们需要的代码
                      */
                     PsiMethod impMethod = (PsiMethod) method.copy();
-                    String proxyCode = logBuilder.genProxyCodeBlock(proxyClassName,method);
+                    String proxyCode = logBuilder.genProxyCodeBlock(proxyClassName, method);
                     PsiCodeBlock codeBlock = factory.createCodeBlockFromText(proxyCode, impMethod);
                     impMethod.add(codeBlock);
 
@@ -182,12 +195,15 @@ public class ProxyGenAction extends AnAction {
         }
 
         final PsiClass clazz = proxyClass;
+
         new WriteCommandAction.Simple(e.getProject(), proxyFile) {
             @Override
-            public void run() throws Throwable {
+            protected void run() throws Throwable {
                 proxyFile.add(clazz);
+                codeStyleManager.optimizeImports(proxyFile);
             }
         }.execute();
+
 
     }
 }

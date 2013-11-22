@@ -37,16 +37,16 @@
 
     <actions>
 
-        <action id="moa-tools.composite-tool" class="com.immomo.plugin.action.ProxyGenAction" text="组合方式"
-                description="组合方式">
+        <action id="moa-tools.phpcode" class="com.immomo.plugin.action.PhpCodeGenAction" text="PHP接口文件"
+                description="PHP接口文件">
         </action>
-        <action id="moa-tools.proxy-tool" class="com.immomo.plugin.action.ProxyGenAction" text="继承方式"
-                description="继承方式">
+        <action id="moa-tools.proxy-tool" class="com.immomo.plugin.action.ProxyGenAction" text="日志代理"
+                description="日志代理">
         </action>
 
-        <group id="composite-tool" text="MOA日志代理类生成器" popup="true" description="MOA工具">
-            <reference id="moa-tools.composite-tool"/>
+        <group id="composite-tool" text="MOA工具" popup="true" description="MOA工具">
             <reference id="moa-tools.proxy-tool"/>
+            <reference id="moa-tools.phpcode"/>
             <add-to-group anchor="last" group-id="ProjectViewPopupMenu"/>
         </group>
 

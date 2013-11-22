@@ -1,6 +1,7 @@
 package com.immomo.plugin.builder;
 
 import com.intellij.psi.*;
+import org.apache.commons.lang.ArrayUtils;
 
 /**
  * Created with IntelliJ IDEA.
@@ -82,13 +83,13 @@ public class ProxyLogBuilder {
         proxyInvoke.append("LogUtils.error(LOG,e,\"").append(clazzName).append("|").append(method.getName()).append("|")
                 .append(paramsLogSB.toString()).append("\",").append(paramsSb).append(");");
 
-        if (null != method.getThrowsList()) {
+        if (!ArrayUtils.isEmpty( method.getThrowsList().getChildren())) {
             proxyInvoke.append("throw e;\n");
         }
         /**
          * finally
          */
-        proxyInvoke.append("}finally{ if(null ==t){ ")
+        proxyInvoke.append("}finally{ if(null ==t || RANDOM.nextInt(1000) == 0 ){ ")
                 .append("LogUtils.info(LOG,\"").append(clazzName).append("|").append(method.getName()).append("|")
                 .append(paramsLogSB.toString()).append("\",").append(paramsSb).append(");}}\n");
 

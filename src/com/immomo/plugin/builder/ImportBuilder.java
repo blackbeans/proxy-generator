@@ -21,6 +21,7 @@ public class ImportBuilder {
         importList.add(this.umarshal(factory, "org.apache.log4j.Logger"));
         importList.add(this.umarshal(factory, "com.immomo.mcf.util.LogUtils"));
         importList.add(this.umarshal(factory, "com.immomo.mcf.util.LogWrapper"));
+        importList.add(this.umarshal(factory, "java.util.Random"));
     }
 
 

@@ -162,6 +162,11 @@ public class ProxyGenAction extends AnAction {
                  */
                 proxyClass.add(factory.createMethodFromText("public abstract void init() throws Exception;", proxyClass));
 
+                /**
+                 * 加入随机抽样日志
+                 */
+                proxyClass.add(factory.createFieldFromText("private static final Random RANDOM = new Random(); ",proxyClass));
+
                 PsiField logField = factory.createFieldFromText(
                         logBuilder.genLogField(StringUtils.uncapitalize(proxyClassName)), proxyClass);
                 proxyClass.add(logField);

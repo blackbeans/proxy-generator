@@ -21,6 +21,10 @@ import com.intellij.psi.javadoc.PsiDocComment;
 import com.intellij.ui.awt.RelativePoint;
 import org.apache.commons.lang.StringUtils;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.StringReader;
+
 /**
  * User: Xmx
  * Date: 13-11-22
@@ -77,15 +81,33 @@ public class PhpCodeGenAction extends AnAction {
         final Document doc = documentManager.getDocument(proxyFile);
 
 
-        final StringBuilder sb = new StringBuilder("<?php\n interface ");
+        final StringBuilder sb = new StringBuilder("<?php\n ");
+        if (null != ((PsiClass) interfaceClass).getDocComment()) {
+            StringReader reader = new StringReader(((PsiClass) interfaceClass).getDocComment().getText());
+            BufferedReader br = new BufferedReader(reader);
+            String line = null;
+            try {
+                while (StringUtils.isNotBlank(line = br.readLine())) {
+                    sb.append("\t").append(line).append("\n");
+                }
+            } catch (IOException e1) {
+                //INGORE
+                e1.printStackTrace();
+            } finally {
+                if (null != br) {
+                    try {
+                        br.close();
+                    } catch (IOException e1) {
+                        e1.printStackTrace();
+                    }
+                }
+            }
+        }
+        sb.append("\tinterface ");
         sb.append(((PsiClass) interfaceClass).getName()).append("{\n");
 
         final PsiClass phpClass = factory.createInterface(((PsiClass) interfaceClass).getName());
 
-//        /**
-//         * 删除public
-//         */
-//        phpClass.getModifierList().delete();
 
         final PsiElement[] interfaceChild = interfacePsiFile.getChildren();
 
@@ -109,7 +131,7 @@ public class PhpCodeGenAction extends AnAction {
 
                     PsiParameterList parameterList = method.getParameterList();
 
-                    String methodCode = this.phpCodeBuilder.buildPhpMethod(method.getDocComment(),methodName, parameterList);
+                    String methodCode = this.phpCodeBuilder.buildPhpMethod(method.getDocComment(), methodName, parameterList);
                     sb.append(methodCode);
 
                 }

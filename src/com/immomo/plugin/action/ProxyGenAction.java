@@ -19,7 +19,6 @@ import com.intellij.psi.javadoc.PsiDocComment;
 import com.intellij.ui.awt.RelativePoint;
 import org.apache.commons.lang.ArrayUtils;
 import org.apache.commons.lang.StringUtils;
-import org.jetbrains.jps.model.java.LanguageLevel;
 
 /**
  * Created with IntelliJ IDEA.

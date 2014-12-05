@@ -42,10 +42,14 @@
         <action id="moa-tools.proxy-tool" class="com.immomo.plugin.action.ProxyGenAction" text="日志代理"
                 description="日志代理">
         </action>
+        <action id="moa-tools.moa-builder" class="com.immomo.plugin.action.MoaBuilderAction" text="创建MOA工程"
+                description="创建MOA工程">
+        </action>
 
         <group id="composite-tool" text="MOA工具" popup="true" description="MOA工具">
             <reference id="moa-tools.proxy-tool"/>
             <reference id="moa-tools.phpcode"/>
+            <reference id="moa-tools.moa-builder"/>
             <add-to-group anchor="last" group-id="ProjectViewPopupMenu"/>
         </group>
 

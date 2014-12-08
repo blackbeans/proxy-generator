@@ -64,8 +64,7 @@ public class MoaBuilderAction extends AnAction {
         MoaBuilderForm dialog = new MoaBuilderForm(new MoaBuilderForm.IBuilderFormListener() {
             @Override
             public void onOk(MoaBuilderArgs args) {
-                onFormOk(rootDir, args);                                                                            ˚
-
+                onFormOk(rootDir, args);
             }
         });
 

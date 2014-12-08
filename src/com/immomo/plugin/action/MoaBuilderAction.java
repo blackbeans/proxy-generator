@@ -42,7 +42,21 @@ public class MoaBuilderAction extends AnAction {
 
         project = e.getProject();
         statusBar = WindowManager.getInstance().getStatusBar(DataKeys.PROJECT.getData(e.getDataContext()));
-        final VirtualFile rootDir = e.getProject().getBaseDir();
+
+        //获取trunk的文件目录
+        VirtualFile currentDir = DataKeys.VIRTUAL_FILE.getData(e.getDataContext());
+
+        if (!currentDir.getName().equalsIgnoreCase("trunk")) {
+            currentDir = finldVirtualFile(e.getProject().getBaseDir(), "trunk");
+        }
+
+        final VirtualFile rootDir = currentDir;
+
+        if (null == currentDir) {
+            this.alert("请选择trunk目录或者根目录！");
+            return ;
+        }
+
 
 
         //选择当服务的根目录
@@ -56,8 +70,8 @@ public class MoaBuilderAction extends AnAction {
         });
 
         //默认的服务名称
-        dialog.getJt_serviceUri().setText("/service/" + rootDir.getName());
-        dialog.getJt_deployPath().setText("/home/deploy/moaservice/"+rootDir.getName());
+        dialog.getJt_serviceUri().setText("/service/" + project.getName());
+        dialog.getJt_deployPath().setText("/home/deploy/moaservice/" + project.getName());
         dialog.pack();
         dialog.setSize(600, 320);
         dialog.setLocationRelativeTo(null);
@@ -131,7 +145,7 @@ public class MoaBuilderAction extends AnAction {
             while (StringUtils.isNotBlank(line = br.readLine())) {
                 sb.append(line.replaceAll("\\{0\\}", args.getServiceName())
                         .replaceAll("\\{1\\}", args.getDeployPath())
-                        .replaceAll("\\{2\\}",args.getLogPath()));
+                        .replaceAll("\\{2\\}", args.getLogPath()));
                 sb.append("\n");
             }
             //存储进去
@@ -214,7 +228,7 @@ public class MoaBuilderAction extends AnAction {
             if ("moaLogPath".equalsIgnoreCase(key)) {
                 value = args.getLogPath();
             } else if ("momo.log.name".equalsIgnoreCase(key)) {
-                value = "./log4m-" + args.getServiceName()+".properties";
+                value = "./log4m-" + args.getServiceName() + ".properties";
             } else if ("moaPort".equalsIgnoreCase(key)) {
                 value = "" + args.getServicePort();
             } else if ("momo.alarm.appname".equalsIgnoreCase(key)) {

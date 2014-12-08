@@ -340,9 +340,9 @@ public class MoaBuilderAction extends AnAction {
         } catch (IOException e) {
             e.printStackTrace();
         } finally {
-            if (null != os) {
+            if (null != dos) {
                 try {
-                    os.close();
+                    dos.close();
                 } catch (IOException e) {
                     e.printStackTrace();
                 }

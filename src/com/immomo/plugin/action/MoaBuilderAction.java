@@ -46,13 +46,13 @@ public class MoaBuilderAction extends AnAction {
         //获取trunk的文件目录
         VirtualFile currentDir = DataKeys.VIRTUAL_FILE.getData(e.getDataContext());
 
-        if (!currentDir.getName().equalsIgnoreCase("trunk")) {
+        if (!"trunk".equalsIgnoreCase(currentDir.getName())) {
             currentDir = finldVirtualFile(e.getProject().getBaseDir(), "trunk");
         }
 
         final VirtualFile rootDir = currentDir;
 
-        if (null == currentDir) {
+        if (null == rootDir) {
             this.alert("请选择trunk目录或者根目录！");
             return ;
         }
@@ -64,7 +64,7 @@ public class MoaBuilderAction extends AnAction {
         MoaBuilderForm dialog = new MoaBuilderForm(new MoaBuilderForm.IBuilderFormListener() {
             @Override
             public void onOk(MoaBuilderArgs args) {
-                onFormOk(rootDir, args);
+                onFormOk(rootDir, args);                                                                            ˚
 
             }
         });
